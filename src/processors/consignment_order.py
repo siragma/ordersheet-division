@@ -106,9 +106,9 @@ class ConsignmentProcessor(QThread):
                         )
                         
                         if column == '상품명':  # 상품명 열은 더 넓게 설정
-                            worksheet.set_column(col_num, col_num, max_length + 8)  # 여유 공간 더 추가
+                            worksheet.set_column(col_num, col_num, max_length + 7)  # 여유 공간 더 추가
                         else:
-                            worksheet.set_column(col_num, col_num, max_length + 2)  # 다른 열은 기존대로
+                            worksheet.set_column(col_num, col_num, max_length + 1)  # 다른 열은 기존대로
                 
                 # 잠시 대기하여 프로그레스바가 너무 빨리 진행되지 않도록 함
                 self.msleep(100)

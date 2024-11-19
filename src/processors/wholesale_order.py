@@ -148,9 +148,9 @@ class WholesaleProcessor(QThread):
                         )
                         
                         if column == '상품명':
-                            worksheet.set_column(col_num, col_num, max_length + 10)  # 여유 공간 증가
+                            worksheet.set_column(col_num, col_num, max_length + 5)  # 여유 공간 증가
                         elif column == '거래처명':
-                            worksheet.set_column(col_num, col_num, max_length + 5)   # 거래처명 여유 공간
+                            worksheet.set_column(col_num, col_num, max_length + 8)   # 거래처명 여유 공간
                         elif column == '발주수량':
                             worksheet.set_column(col_num, col_num, max_length + 4)   # 발주수량 여유 공간
                         else:
