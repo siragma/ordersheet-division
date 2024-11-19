@@ -59,21 +59,25 @@ class ConsignmentProcessor(QThread):
                         'border': 1,            # 테두리
                         'valign': 'vcenter',    # 수직 가운데 정렬
                         'align': 'center',      # 가운데 정렬 (헤더만)
-                        'bold': True            # 굵은 글씨 (헤더만)
+                        'bold': True,           # 굵은 글씨 (헤더만)
+                        'font_size': 9         # 글자 크기 9
                     })
                     
                     cell_format = workbook.add_format({
                         'border': 1,            # 테두리
-                        'valign': 'vcenter'     # 수직 가운데 정렬만 유지
+                        'valign': 'vcenter',    # 수직 가운데 정렬만 유지
+                        'font_size': 9         # 글자 크기 9
                     })
                     
                     total_format = workbook.add_format({
                         'bold': True,           # 굵은 글씨
-                        'valign': 'vcenter'     # 수직 가운데 정렬만 유지
+                        'valign': 'vcenter',    # 수직 가운데 정렬만 유지
+                        'font_size': 9         # 글자 크기 9
                     })
                     
                     empty_format = workbook.add_format({
-                        'valign': 'vcenter'     # 수직 가운데 정렬만 유지
+                        'valign': 'vcenter',    # 수직 가운데 정렬만 유지
+                        'font_size': 9         # 글자 크기 9
                     })
                     
                     # 헤더 스타일 적용
