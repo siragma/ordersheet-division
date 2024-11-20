@@ -80,33 +80,28 @@ class WholesaleProcessor(QThread):
                         'border': 1,
                         'valign': 'vcenter',
                         'align': 'center',
-                        'bold': True,
-                        'font_size': 9
+                        'bold': True
                     })
                     
                     cell_format = workbook.add_format({
                         'border': 1,
-                        'valign': 'vcenter',
-                        'font_size': 9
+                        'valign': 'vcenter'
                     })
                     
                     total_format = workbook.add_format({
                         'bold': True,
                         'valign': 'vcenter',
-                        'num_format': '#,##0',  # 합계 행에도 숫자 포맷 추가
-                        'font_size': 9
+                        'num_format': '#,##0'  # 합계 행에도 숫자 포맷 추가
                     })
                     
                     empty_format = workbook.add_format({
-                        'valign': 'vcenter',
-                        'font_size': 9
+                        'valign': 'vcenter'
                     })
                     
                     number_format = workbook.add_format({
                         'border': 1,
                         'valign': 'vcenter',
-                        'num_format': '#,##0',  # 숫자 포맷 추가
-                        'font_size': 9
+                        'num_format': '#,##0'  # 숫자 포맷 추가
                     })
                     
                     # 헤더 스타일 적용
