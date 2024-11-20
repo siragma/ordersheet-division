@@ -1,7 +1,7 @@
 import os
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QPushButton, QLabel, QProgressBar, QFileDialog, QMessageBox
 from PyQt5.QtCore import Qt
-from src.processors.wholesale_order import WholesaleProcessor
+from processors.wholesale_order import WholesaleOrder
 
 class WholesaleTab(QWidget):
     def __init__(self):

@@ -1,6 +1,9 @@
 import sys
 import os
-sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
+# 프로젝트 루트 디렉토리를 PYTHONPATH에 추가
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(project_root)
 
 from PyQt5.QtWidgets import QApplication
 from src.ui.main_window import MainWindow

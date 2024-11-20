@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QMainWindow, QWidget, QVBoxLayout, QTabWidget
-from src.ui.tabs.consignment_tab import ConsignmentTab
-from src.ui.tabs.wholesale_tab import WholesaleTab
+from ui.tabs.consignment_tab import ConsignmentTab
+from ui.tabs.wholesale_tab import WholesaleTab
 
 class MainWindow(QMainWindow):
     def __init__(self):
