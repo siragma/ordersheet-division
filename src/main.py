@@ -6,7 +6,7 @@ project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(project_root)
 
 from PyQt5.QtWidgets import QApplication
-from src.ui.main_window import MainWindow
+from ui.main_window import MainWindow
 
 
 def main():
