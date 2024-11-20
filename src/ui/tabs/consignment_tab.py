@@ -1,7 +1,7 @@
 import os
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QPushButton, QLabel, QProgressBar, QFileDialog, QMessageBox
 from PyQt5.QtCore import Qt
-from processors.consignment_order import ConsignmentOrder
+from processors.consignment_order import ConsignmentProcessor
 
 class ConsignmentTab(QWidget):
     def __init__(self):

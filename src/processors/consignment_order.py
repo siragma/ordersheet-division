@@ -59,21 +59,25 @@ class ConsignmentProcessor(QThread):
                         'border': 1,            # 테두리
                         'valign': 'vcenter',    # 수직 가운데 정렬
                         'align': 'center',      # 가운데 정렬 (헤더만)
-                        'bold': True            # 굵은 글씨 (헤더만)
+                        'bold': True,            # 굵은 글씨 (헤더만)
+                        'font_size': 9
                     })
                     
                     cell_format = workbook.add_format({
                         'border': 1,            # 테두리
-                        'valign': 'vcenter'     # 수직 가운데 정렬만 유지
+                        'valign': 'vcenter',     # 수직 가운데 정렬만 유지
+                        'font_size': 9
                     })
                     
                     total_format = workbook.add_format({
                         'bold': True,           # 굵은 글씨
-                        'valign': 'vcenter'     # 수직 가운데 정렬만 유지
+                        'valign': 'vcenter',     # 수직 가운데 정렬만 유지
+                        'font_size': 9
                     })
                     
                     empty_format = workbook.add_format({
-                        'valign': 'vcenter'     # 수직 가운데 정렬만 유지
+                        'valign': 'vcenter',     # 수직 가운데 정렬만 유지
+                        'font_size': 9
                     })
                     
                     # 헤더 스타일 적용
@@ -102,7 +106,11 @@ class ConsignmentProcessor(QThread):
                         )
                         
                         if column == '상품명':  # 상품명 열은 더 넓게 설정
-                            worksheet.set_column(col_num, col_num, max_length + 7)  # 여유 공간 더 추가
+                            worksheet.set_column(col_num, col_num, max_length + 5)  # 여유 공간 더 추가
+                        elif column == '거래처명': 
+                            worksheet.set_column(col_num, col_num, max_length + 5)  # 여유 공간 더 추가
+                        elif column == '발주수량': 
+                            worksheet.set_column(col_num, col_num, max_length + 3)  # 여유 공간 더 추가
                         else:
                             worksheet.set_column(col_num, col_num, max_length + 1)  # 다른 열은 기존대로
                 

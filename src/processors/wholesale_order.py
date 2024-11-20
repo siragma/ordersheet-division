@@ -80,28 +80,33 @@ class WholesaleProcessor(QThread):
                         'border': 1,
                         'valign': 'vcenter',
                         'align': 'center',
-                        'bold': True
+                        'bold': True,
+                        'font_size': 9
                     })
                     
                     cell_format = workbook.add_format({
                         'border': 1,
-                        'valign': 'vcenter'
+                        'valign': 'vcenter',
+                        'font_size': 9
                     })
                     
                     total_format = workbook.add_format({
                         'bold': True,
                         'valign': 'vcenter',
-                        'num_format': '#,##0'  # 합계 행에도 숫자 포맷 추가
+                        'num_format': '#,##0',
+                        'font_size': 9
                     })
                     
                     empty_format = workbook.add_format({
-                        'valign': 'vcenter'
+                        'valign': 'vcenter',
+                        'font_size': 9
                     })
                     
                     number_format = workbook.add_format({
                         'border': 1,
                         'valign': 'vcenter',
-                        'num_format': '#,##0'  # 숫자 포맷 추가
+                        'num_format': '#,##0',
+                        'font_size': 9
                     })
                     
                     # 헤더 스타일 적용
@@ -143,13 +148,13 @@ class WholesaleProcessor(QThread):
                         )
                         
                         if column == '상품명':
-                            worksheet.set_column(col_num, col_num, max_length + 5)  # 여유 공간 증가
+                            worksheet.set_column(col_num, col_num, max_length + 8)  # 여유 공간 증가
                         elif column == '거래처명':
-                            worksheet.set_column(col_num, col_num, max_length + 8)   # 거래처명 여유 공간
+                            worksheet.set_column(col_num, col_num, max_length + 5)   # 거래처명 여유 공간
                         elif column == '발주수량':
                             worksheet.set_column(col_num, col_num, max_length + 4)   # 발주수량 여유 공간
                         else:
-                            worksheet.set_column(col_num, col_num, max_length + 2)
+                            worksheet.set_column(col_num, col_num, max_length + 1)
                 
                 self.msleep(100)
             
